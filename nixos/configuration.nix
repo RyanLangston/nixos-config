@@ -132,13 +132,16 @@
     kdePackages.sddm-kcm
     sweet
     htop
+    sddm-sugar-dark
   ];
 
  # Enable Bluetooth support
   hardware.bluetooth.enable = true;
 
   # Enable numlock on startup
-  services.displayManager.sddm.numlock.enable = true;
+  services.displayManager.sddm.autoNumlock = true;
+  # sddm theme
+  services.displayManager.sddm.theme = "sugar-dark";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
