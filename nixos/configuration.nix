@@ -128,13 +128,10 @@
   #  wget
     librewolf
     topgrade
-    #  libsForQt5.qtstyleplugin-kvantum
     kdePackages.qtstyleplugin-kvantum
-    # latte-dock
-    # themechanger
+    kdePackages.sddm-kcm
     sweet
     htop
-    # catppuccin-kvantum
   ];
 
  # Enable Bluetooth support
