@@ -60,7 +60,7 @@
   services.xserver.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
+  # services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
@@ -132,16 +132,25 @@
     kdePackages.sddm-kcm
     sweet
     htop
-    sddm-sugar-dark
+    (catppuccin-sddm.override {
+      flavor = "macchiato";
+      # TODO: Set up a cool wallpaper
+      # font  = "Noto Sans";
+      # fontSize = "9";
+      # background = "${./wallpaper.png}";
+      loginBackground = true;
+    })
   ];
 
  # Enable Bluetooth support
   hardware.bluetooth.enable = true;
 
   # Enable numlock on startup
-  services.displayManager.sddm.autoNumlock = true;
-  # sddm theme
-  services.displayManager.sddm.theme = "sugar-dark";
+  services.displayManager.sddm = {
+    enable = true;
+    autoNumlock = true;
+    theme = "catppuccin-macchiato";
+};
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
