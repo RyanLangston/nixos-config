@@ -12,6 +12,10 @@
       ./bigdwive.nix
     ];
   
+  # Set linux kernel to latest
+  boot.kernelPackages = pkgs.linuxPackages_6_12;
+
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -34,6 +38,8 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
+  # Set your keyboard layout.
+
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
     LC_IDENTIFICATION = "en_US.UTF-8";
@@ -45,6 +51,9 @@
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
+
+  # Enable new-lg4ff driver for Logitech G29
+  hardware.new-lg4ff.enable = true;
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
@@ -119,6 +128,7 @@
   #  wget
      librewolf
      topgrade
+     libsForQt5.qtstyleplugin-kvantum
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
