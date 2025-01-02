@@ -4,6 +4,12 @@
 
 { config, pkgs, inputs, ... }:
 
+let
+  sweetMarsTheme = import ./sweet-mars-sddm.nix { 
+    inherit (pkgs) stdenv fetchurl libsForQt5;
+  };
+in
+
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -132,13 +138,19 @@
     kdePackages.sddm-kcm
     sweet
     htop
+    sweetMarsTheme
+    sddm
   ];
 
  # Enable Bluetooth support
   hardware.bluetooth.enable = true;
 
   # Enable numlock on startup
-  services.displayManager.sddm.autoNumlock = true;
+  services.displayManager.sddm = {
+    # enable = true;
+    theme = "sweet-mars";
+    extraPackages = with pkgs; [ sddm ];
+};
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
