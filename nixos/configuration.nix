@@ -130,8 +130,8 @@
     topgrade
     #  libsForQt5.qtstyleplugin-kvantum
     kdePackages.qtstyleplugin-kvantum
-    latte-dock
-    themechanger
+    # latte-dock
+    # themechanger
     sweet
     htop
     # catppuccin-kvantum
