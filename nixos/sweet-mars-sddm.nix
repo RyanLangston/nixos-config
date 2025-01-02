@@ -17,5 +17,5 @@
   ];
 
 #   services.xserver.displayManager.sddm.enable = true;
-  services.xserver.displayManager.sddm.theme = "sweet-mars";
+  services.displayManager.sddm.theme = "sweet-mars";
 }
