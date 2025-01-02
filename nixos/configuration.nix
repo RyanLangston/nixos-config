@@ -129,6 +129,7 @@
      librewolf
      topgrade
      libsForQt5.qtstyleplugin-kvantum
+     themechanger
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
