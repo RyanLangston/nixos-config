@@ -134,13 +134,11 @@
     htop
     (catppuccin-sddm.override {
       flavor = "macchiato";
-      # TODO: Set up a cool wallpaper
       # font  = "Noto Sans";
       # fontSize = "9";
-      # TODO: FIX THIS!!!!
       background = "${./Sweet-space.png}";
       # TODO: Figure out what this does
-#       loginBackground = true;
+      # loginBackground = true;
     })
   ];
 
