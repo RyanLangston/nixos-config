@@ -137,8 +137,10 @@
       # TODO: Set up a cool wallpaper
       # font  = "Noto Sans";
       # fontSize = "9";
-      # background = "${./wallpaper.png}";
-      loginBackground = true;
+      # TODO: FIX THIS!!!!
+      background = "${./Sweet-space.png}";
+      # TODO: Figure out what this does
+#       loginBackground = true;
     })
   ];
 
