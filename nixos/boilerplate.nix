@@ -1,8 +1,8 @@
 { config, lib, pkgs, ... }:
 
 {
-    # Set linux kernel to latest
-    boot.kernelPackages = pkgs.linuxPackages_6_12;
+    boot.kernelPackages = pkgs.linuxPackages_cachyos;
+    services.scx.enable = true; # by default uses scx_rustland scheduler
 
 
     # Bootloader.
