@@ -13,6 +13,7 @@
       inputs.home-manager.nixosModules.home-manager
       ./kde/kde.nix
       ./boilerplate.nix
+      ./sddm.nix
     ];
 
   home-manager = {
@@ -78,37 +79,16 @@
 
   programs.zsh.enable = true;
 
-  # Enable the Flakes feature and the accompanying new nix command-line tool
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     librewolf
-    kdePackages.qtstyleplugin-kvantum
-    kdePackages.sddm-kcm
     kdePackages.kate
     htop
-    (catppuccin-sddm.override {
-      flavor = "macchiato";
-      # font  = "Noto Sans";
-      # fontSize = "9";
-      background = "${./Sweet-space.png}";
-      # TODO: Figure out what this does
-      # loginBackground = true;
-    })
   ];
 
  # Enable Bluetooth support
   hardware.bluetooth.enable = true;
-
-  # Enable numlock on startup
-  services.displayManager.sddm = {
-    enable = true;
-    autoNumlock = true;
-    theme = "catppuccin-macchiato";
-};
-
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
