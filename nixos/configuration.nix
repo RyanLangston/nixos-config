@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, inputs, outputs, ... }:
 
 {
   imports =
@@ -10,7 +10,16 @@
       ./hardware-configuration.nix
       ./nvidia.nix
       ./bigdwive.nix
+      inputs.home-manager.nixosModules.home-manager
     ];
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs outputs; };
+    users = {
+      # Import your home-manager configuration
+      ryanl = import ../home-manager/home.nix;
+    };
+  };
   
   # Set linux kernel to latest
   boot.kernelPackages = pkgs.linuxPackages_6_12;
@@ -153,6 +162,8 @@
     autoNumlock = true;
     theme = "catppuccin-macchiato";
 };
+
+#   nixpkgs.config.allowUnfree = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
