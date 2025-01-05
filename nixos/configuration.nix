@@ -11,6 +11,8 @@
       ./nvidia.nix
       ./bigdwive.nix
       inputs.home-manager.nixosModules.home-manager
+      ./kde/kde.nix
+      ./boilerplate.nix
     ];
 
   home-manager = {
@@ -21,15 +23,6 @@
     };
   };
   
-  # Set linux kernel to latest
-  boot.kernelPackages = pkgs.linuxPackages_6_12;
-
-
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.loader.systemd-boot.configurationLimit = 6;
 
   networking.hostName = "bagelmachine"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -41,45 +34,8 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
-  time.timeZone = "America/Denver";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
-
-  # Set your keyboard layout.
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
-
   # Enable new-lg4ff driver for Logitech G29
   hardware.new-lg4ff.enable = true;
-
-  # Enable the X11 windowing system.
-  # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  # services.displayManager.sddm.enable = true;
-  services.desktopManager.plasma6.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
@@ -106,10 +62,6 @@
     description = "Ryan Langston";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-      kdePackages.kate
-    #  thunderbird
-    ];
   };
 
   programs.steam = {
@@ -133,10 +85,9 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     librewolf
-    topgrade
     kdePackages.qtstyleplugin-kvantum
     kdePackages.sddm-kcm
-    sweet
+    kdePackages.kate
     htop
     (catppuccin-sddm.override {
       flavor = "macchiato";
