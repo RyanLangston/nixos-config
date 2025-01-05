@@ -14,12 +14,15 @@
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    # Nyx packages
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    chaotic,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -30,7 +33,10 @@
       bagelmachine = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         # > Our main nixos configuration file <
-        modules = [./nixos/configuration.nix];
+        modules = [
+          ./nixos/configuration.nix
+          chaotic.nixosModules.default
+        ];
       };
     };
   };
