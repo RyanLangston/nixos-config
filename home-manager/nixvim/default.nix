@@ -26,4 +26,3 @@
     luaLoader.enable = true;
   };
 }
-

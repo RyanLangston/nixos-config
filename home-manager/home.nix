@@ -103,7 +103,9 @@
   };
 
   # Font Configuration
-  fonts = { fontconfig.enable = true; };
+  fonts = {
+    fontconfig.enable = true;
+  };
   nixpkgs.config.allowUnfree = true;
 
   # Nicely reload system units when changing configs

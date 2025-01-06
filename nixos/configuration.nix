@@ -2,10 +2,18 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, outputs, pkgs-stable, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  outputs,
+  pkgs-stable,
+  ...
+}:
 
 {
-  imports = [ # Include the results of the hardware scan.
+  imports = [
+    # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./nvidia.nix
     ./bigdwive.nix
@@ -26,7 +34,12 @@
   networking.hostName = "bagelmachine"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  networking.hosts = { "192.168.1.104" = [ "tower.local" "tower" ]; };
+  networking.hosts = {
+    "192.168.1.104" = [
+      "tower.local"
+      "tower"
+    ];
+  };
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -61,17 +74,18 @@
   users.users.ryanl = {
     isNormalUser = true;
     description = "Ryan Langston";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     shell = pkgs.zsh;
   };
 
   programs.steam = {
     enable = true;
-    remotePlay.openFirewall =
-      true; # Open ports in the firewall for Steam Remote Play
+    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
     #dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall =
-      true; # Open ports in the firewall for Steam Local Network Game Transfers
+    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
   programs.steam.protontricks.enable = true;

@@ -1,4 +1,10 @@
-{ config, pkgs, inputs, outputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  outputs,
+  ...
+}:
 
 {
   # Enable the X11 windowing system.

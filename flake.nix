@@ -18,8 +18,7 @@
     # Nyx packages
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     # Quickemu
-    quickemu.url =
-      "https://flakehub.com/f/quickemu-project/quickemu/4.9.7.tar.gz";
+    quickemu.url = "https://flakehub.com/f/quickemu-project/quickemu/4.9.7.tar.gz";
     # NixVim
     nixvim = {
       url = "github:nix-community/nixvim";
@@ -28,10 +27,21 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, home-manager, chaotic, quickemu
-    , nixvim, ... }@inputs:
-    let inherit (self) outputs;
-    in {
+  outputs =
+    {
+      self,
+      nixpkgs,
+      nixpkgs-stable,
+      home-manager,
+      chaotic,
+      quickemu,
+      nixvim,
+      ...
+    }@inputs:
+    let
+      inherit (self) outputs;
+    in
+    {
       # NixOS configuration entrypoint
       # Available through 'nixos-rebuild --flake .#your-hostname'
       nixosConfigurations = {
@@ -49,7 +59,10 @@
             };
           };
           # > Our main nixos configuration file <
-          modules = [ ./nixos/configuration.nix chaotic.nixosModules.default ];
+          modules = [
+            ./nixos/configuration.nix
+            chaotic.nixosModules.default
+          ];
         };
       };
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
