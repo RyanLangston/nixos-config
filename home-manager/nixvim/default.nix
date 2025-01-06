@@ -24,6 +24,7 @@
       web-devicons.enable = true;
       lz-n.enable = true;
       nix.enable = true;
+      lazygit.enable = true;
     };
 
     performance = {
