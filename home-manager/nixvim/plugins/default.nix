@@ -7,6 +7,7 @@
     ./neotree.nix
     ./barbar.nix
     ./lualine.nix 
+    ./telescope.nix
   ];
 
 }
