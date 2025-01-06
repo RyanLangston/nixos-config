@@ -1,9 +1,10 @@
-{ inputs, ...}:
+{ inputs, ... }:
 
 {
-  # Need to import nixvim home manager module
+# Need to import nixvim home manager module
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
+    ./plugins
   ];
 
   programs.nixvim = {
@@ -20,9 +21,10 @@
       telescope.enable = true;
       which-key.enable = true;
       mini.enable = true;
+      web-devicons.enable = true;
     };
 
     luaLoader.enable = true;  
   };
-
 }
+  

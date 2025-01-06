@@ -1,0 +1,7 @@
+# { input, ... }:
+
+{
+  imports = [
+    ./treesitter.nix
+  ]
+}
