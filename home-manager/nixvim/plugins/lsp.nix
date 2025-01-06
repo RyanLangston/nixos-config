@@ -31,6 +31,9 @@
 
         servers = {
           nil_ls.enable = true;
+          nil_ls.settings.formatting.command = [
+            "nixfmt"
+          ];
         };
       };
     };
