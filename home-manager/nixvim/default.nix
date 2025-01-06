@@ -17,12 +17,12 @@
 
     plugins = {
       dashboard.enable = true;
-      lsp.enable = true;
       telescope.enable = true;
       which-key.enable = true;
       mini.enable = true;
       web-devicons.enable = true;
       lz-n.enable = true;
+      nix.enable = true;
     };
 
     performance = {
