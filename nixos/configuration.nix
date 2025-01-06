@@ -106,6 +106,7 @@
     htop
     pkgs-stable.goverlay
     inputs.quickemu.packages.x86_64-linux.default
+    nil
   ];
 
   # Enable Bluetooth support
