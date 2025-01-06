@@ -1,6 +1,11 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 
 {
+  # Import other files
+  imports = [
+    ./nixvim.nix
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "ryanl";
@@ -28,6 +33,7 @@
     pkgs.mangohud
     pkgs.protonup-qt
     pkgs.youtube-music
+    pkgs.ripgrep
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
