@@ -1,7 +1,5 @@
 # { input, ... }:
 
 {
-    imports = [
-        ./treesitter.nix
-    ];
+  imports = [ ./treesitter.nix ];
 }

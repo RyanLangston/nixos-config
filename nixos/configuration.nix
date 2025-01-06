@@ -5,16 +5,15 @@
 { config, pkgs, inputs, outputs, pkgs-stable, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./nvidia.nix
-      ./bigdwive.nix
-      inputs.home-manager.nixosModules.home-manager
-      ./kde/kde.nix
-      ./boilerplate.nix
-      ./sddm.nix
-    ];
+  imports = [ # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    ./nvidia.nix
+    ./bigdwive.nix
+    inputs.home-manager.nixosModules.home-manager
+    ./kde/kde.nix
+    ./boilerplate.nix
+    ./sddm.nix
+  ];
 
   home-manager = {
     extraSpecialArgs = { inherit inputs outputs; };
@@ -23,14 +22,11 @@
       ryanl = import ../home-manager/home.nix;
     };
   };
-  
 
   networking.hostName = "bagelmachine"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  networking.hosts = {
-    "192.168.1.104" = [ "tower.local" "tower" ];
-  };
+  networking.hosts = { "192.168.1.104" = [ "tower.local" "tower" ]; };
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -71,9 +67,11 @@
 
   programs.steam = {
     enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+    remotePlay.openFirewall =
+      true; # Open ports in the firewall for Steam Remote Play
     #dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+    localNetworkGameTransfers.openFirewall =
+      true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
   programs.steam.protontricks.enable = true;
@@ -96,7 +94,7 @@
     inputs.quickemu.packages.x86_64-linux.default
   ];
 
- # Enable Bluetooth support
+  # Enable Bluetooth support
   hardware.bluetooth.enable = true;
 
   services.tailscale.enable = true;
