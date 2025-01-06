@@ -40,7 +40,7 @@
   networking.networkmanager.enable = true;
 
   # Enable new-lg4ff driver for Logitech G29
-  hardware.new-lg4ff.enable = true;
+  # hardware.new-lg4ff.enable = true;
 
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
@@ -77,6 +77,8 @@
   };
 
   programs.steam.protontricks.enable = true;
+
+  programs.gamemode.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
