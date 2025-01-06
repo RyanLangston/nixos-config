@@ -10,6 +10,6 @@
         indent.enable = true;
       };
       folding = true;
-    }
-  }
+    };
+  };
 }

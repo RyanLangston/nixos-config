@@ -17,7 +17,6 @@
       lazy.enable = true;
       lsp.enable = true;
       cmp.enable = true;
-      treesitter.enable = true;
       telescope.enable = true;
       which-key.enable = true;
       mini.enable = true;
