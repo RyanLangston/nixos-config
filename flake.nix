@@ -17,7 +17,6 @@
     };
     # Nyx packages
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/*.tar.gz";
     quickemu.url = "https://flakehub.com/f/quickemu-project/quickemu/4.9.7.tar.gz";
   };
 
@@ -27,7 +26,6 @@
     nixpkgs-stable,
     home-manager,
     chaotic,
-    fh,
     quickemu,
     ...
   } @ inputs: let
@@ -51,9 +49,6 @@
         };
         # > Our main nixos configuration file <
         modules = [
-          {
-            environment.systemPackages = [ fh.packages.x86_64-linux.default ];
-          }
           ./nixos/configuration.nix
           chaotic.nixosModules.default
         ];
