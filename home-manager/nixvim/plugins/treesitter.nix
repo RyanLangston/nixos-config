@@ -1,15 +1,15 @@
 {
-  programs.nixvim.plugins = {
+    programs.nixvim.plugins = {
     treesitter = {
-      enable = true;
+        enable = true;
 
-      nixvimInjections = true;
+        nixvimInjections = true;
 
-      settings = {
+        settings = {
         highlight.enable = true;
         indent.enable = true;
-      };
-      folding = true;
+        };
+        folding = true;
     };
-  };
+    };
 }
