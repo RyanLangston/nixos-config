@@ -22,6 +22,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-stable,
     home-manager,
     chaotic,
     ...
@@ -31,8 +32,19 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-      bagelmachine = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
+      bagelmachine = nixpkgs.lib.nixosSystem rec {
+        system = "x86_64-linux";
+        specialArgs = {
+          inherit inputs outputs;
+          pkgs-stable = import nixpkgs-stable {
+            # Refer to the `system` parameter from
+            # the outer scope recursively
+            inherit system;
+            # To use Chrome, we need to allow the
+            # installation of non-free software.
+            config.allowUnfree = true;
+          };
+        };
         # > Our main nixos configuration file <
         modules = [
           ./nixos/configuration.nix
