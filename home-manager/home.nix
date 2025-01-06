@@ -26,7 +26,6 @@
     pkgs.vscode
     pkgs.meslo-lgs-nf
     pkgs.mangohud
-    pkgs.goverlay
     pkgs.protonup-qt
     pkgs.youtube-music
     # # It is sometimes useful to fine-tune packages, for example, by applying
