@@ -7,6 +7,7 @@
     ./plugins
     ./completion.nix
     ./autocommands.nix
+    ./options.nix
   ];
 
   programs.nixvim = {
@@ -21,7 +22,12 @@
       which-key.enable = true;
       mini.enable = true;
       web-devicons.enable = true;
+      plugins.lz-n.enable = true;
     };
+
+    performance = {
+      byteCompileLua.enable = true;
+    }
 
     luaLoader.enable = true;
   };
