@@ -5,6 +5,8 @@
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
     ./plugins
+    ./completion.nix
+    ./autocommands.nix
   ];
 
   programs.nixvim = {
@@ -14,9 +16,7 @@
 
     plugins = {
       dashboard.enable = true;
-      lazy.enable = true;
       lsp.enable = true;
-      cmp.enable = true;
       telescope.enable = true;
       which-key.enable = true;
       mini.enable = true;
