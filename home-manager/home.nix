@@ -90,7 +90,7 @@
     git = {
       enable = true;
       userName = "Dragonlord1005";
-      userEmail = "dragonlord100587@gmail.com";
+      userEmail = "68302450+Dragonlord1005@users.noreply.github.com";
     };
     zsh = {
       enable = true;
