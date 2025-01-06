@@ -7,3 +7,4 @@
 		command = "setlocal shiftwidth=2";
 	}
   ];
+}
