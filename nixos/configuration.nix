@@ -93,12 +93,15 @@
     kdePackages.filelight
     htop
     pkgs-stable.goverlay
+    inputs.quickemu.packages.x86_64-linux.default
   ];
 
  # Enable Bluetooth support
   hardware.bluetooth.enable = true;
 
   services.tailscale.enable = true;
+
+  virtualisation.waydroid.enable
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

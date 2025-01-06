@@ -18,6 +18,7 @@
     # Nyx packages
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
     fh.url = "https://flakehub.com/f/DeterminateSystems/fh/*.tar.gz";
+    quickemu.url = "https://flakehub.com/f/quickemu-project/quickemu/4.9.7.tar.gz";
   };
 
   outputs = {
@@ -27,6 +28,7 @@
     home-manager,
     chaotic,
     fh,
+    quickemu,
     ...
   } @ inputs: let
     inherit (self) outputs;
