@@ -17,6 +17,7 @@
     };
     # Nyx packages
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    fh.url = "https://flakehub.com/f/DeterminateSystems/fh/*.tar.gz";
   };
 
   outputs = {
@@ -25,6 +26,7 @@
     nixpkgs-stable,
     home-manager,
     chaotic,
+    fh,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -47,6 +49,9 @@
         };
         # > Our main nixos configuration file <
         modules = [
+          {
+            environment.systemPackages = [ fh.packages.x86_64-linux.default ];
+          }
           ./nixos/configuration.nix
           chaotic.nixosModules.default
         ];
