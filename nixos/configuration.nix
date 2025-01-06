@@ -74,6 +74,8 @@
   users.users.ryanl = {
     isNormalUser = true;
     description = "Ryan Langston";
+    # MAKE SURE TO CHANGE THIS
+    initialPassword = "password";
     extraGroups = [
       "networkmanager"
       "wheel"
