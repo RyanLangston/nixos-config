@@ -22,13 +22,14 @@
       which-key.enable = true;
       mini.enable = true;
       web-devicons.enable = true;
-      plugins.lz-n.enable = true;
+      lz-n.enable = true;
     };
 
     performance = {
       byteCompileLua.enable = true;
-    }
+    };
 
     luaLoader.enable = true;
   };
 }
+# 

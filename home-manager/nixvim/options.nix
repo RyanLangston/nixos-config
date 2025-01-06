@@ -5,6 +5,6 @@
 
       # Folding
       foldlevel = 99;
-    }
-  }
+    };
+  };
 }
