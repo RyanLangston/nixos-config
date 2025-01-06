@@ -1,5 +1,5 @@
 {
-  programs.nixvim =  {
+  programs.nixvim = {
     opts = {
       updatetime = 100; # Faster completion
 
