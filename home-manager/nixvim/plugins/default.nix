@@ -5,7 +5,8 @@
     ./treesitter.nix
     ./lsp.nix
     ./neotree.nix
-    ./lualine.nix
+    ./barbar.nix
+    ./lualine.nix 
   ];
 
 }

@@ -8,6 +8,7 @@
     ./completion.nix
     ./autocommands.nix
     ./options.nix
+    ./keybindings.nix
   ];
 
   programs.nixvim = {
@@ -26,6 +27,13 @@
     };
 
     performance = {
+      combinePlugins = {
+        enable = true;
+        standalonePlugins = [
+          "hmts.nvim"
+          "nvim-treesitter"
+        ];
+      };
       byteCompileLua.enable = true;
     };
 

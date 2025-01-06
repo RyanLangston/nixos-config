@@ -36,6 +36,7 @@
           ];
         };
       };
+      hmts.enable = true;
     };
   };
 }
