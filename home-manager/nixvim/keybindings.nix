@@ -56,7 +56,7 @@
               "<M-k>" = ":move-2<CR>";
               "<M-j>" = ":move+<CR>";
 
-              "<leader>rp" = ":LazyGit<CR>";
+              "<leader>g" = ":LazyGit<CR>";
             };
         visual =
           lib.mapAttrsToList
