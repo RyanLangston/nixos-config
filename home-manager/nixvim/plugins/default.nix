@@ -10,5 +10,4 @@
     ./telescope.nix
     ./floaterm.nix
   ];
-
 }
