@@ -26,6 +26,7 @@
       nix.enable = true;
       lazygit.enable = true;
       fzf-lua.enable = true;
+      nvim-autopairs.enable = true;
     };
 
     performance = {
