@@ -34,6 +34,15 @@
           nil_ls.settings.formatting.command = [
             "nixfmt"
           ];
+          ts-ls = {
+            enable = true;
+          filetypes = [
+            "javascript"
+            "javascriptreact"
+            "typescript"
+            "typescriptreact"
+          ];
+          };
         };
       };
       hmts.enable = true;
