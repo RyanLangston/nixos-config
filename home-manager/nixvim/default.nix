@@ -10,14 +10,14 @@
     ./newcompletion.nix
   ];
 
+  home.shellAliases.v = "nvim";
+
   programs.nixvim = {
     enable = true;
 
     colorschemes.catppuccin.enable = true;
 
     plugins = {
-      dashboard.enable = true;
-      telescope.enable = true;
       which-key.enable = true;
       mini.enable = true;
       web-devicons.enable = true;
@@ -26,6 +26,7 @@
       lazygit.enable = true;
       fzf-lua.enable = true;
       nvim-autopairs.enable = true;
+      auto-session.enable = true;
     };
 
     performance = {
@@ -38,6 +39,9 @@
       };
       byteCompileLua.enable = true;
     };
+
+    viAlias = true;
+    vimAlias = true;
 
     luaLoader.enable = true;
   };
