@@ -5,10 +5,9 @@
   imports = [
     inputs.nixvim.homeManagerModules.nixvim
     ./plugins
-    ./completion.nix
-    ./autocommands.nix
     ./options.nix
     ./keybindings.nix
+    ./newcompletion.nix
   ];
 
   programs.nixvim = {
