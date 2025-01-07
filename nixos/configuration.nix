@@ -3,7 +3,6 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 {
-  config,
   pkgs,
   inputs,
   outputs,
@@ -48,11 +47,8 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  # Enable new-lg4ff driver for Logitech G29
-  # hardware.new-lg4ff.enable = true;
-
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -97,7 +93,10 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  programs.zsh.enable = true;
+  programs = {
+    zsh.enable = true;
+    bat.enable = true;
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
@@ -109,6 +108,7 @@
     pkgs-stable.goverlay
     inputs.quickemu.packages.x86_64-linux.default
     nil
+    fzf
   ];
 
   # Enable Bluetooth support
