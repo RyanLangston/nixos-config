@@ -27,6 +27,7 @@
       fzf-lua.enable = true;
       nvim-autopairs.enable = true;
       auto-session.enable = true;
+      direnv.enable = true;
     };
 
     performance = {
