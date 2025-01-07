@@ -97,6 +97,7 @@
     fzf
     mangohud
     nix-tree
+    youtube-music
   ];
 
   # Enable Bluetooth support
