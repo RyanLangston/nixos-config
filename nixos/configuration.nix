@@ -95,6 +95,8 @@
     htop
     nil
     fzf
+    mangohud
+    nix-tree
   ];
 
   # Enable Bluetooth support
