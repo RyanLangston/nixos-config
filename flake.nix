@@ -17,8 +17,6 @@
     };
     # Nyx packages
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-    # Quickemu
-    quickemu.url = "https://flakehub.com/f/quickemu-project/quickemu/4.9.7.tar.gz";
     # NixVim
     nixvim = {
       url = "github:nix-community/nixvim";
