@@ -34,7 +34,6 @@
       nixpkgs-stable,
       home-manager,
       chaotic,
-      quickemu,
       nixvim,
       ...
     }@inputs:
@@ -66,6 +65,15 @@
         };
       };
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
-
+      homeConfiguation = {
+    "ryanl@bagemachine" = home-manager.lib.homeManagerConfiguration {
+      pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [
+          # > Our main home-manager configuration file <
+          ./home-manager/home.nix
+        ];
+    };
+      };
     };
 }

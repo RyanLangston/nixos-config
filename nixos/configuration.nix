@@ -16,19 +16,19 @@
     ./hardware-configuration.nix
     ./nvidia.nix
     ./bigdwive.nix
-    inputs.home-manager.nixosModules.home-manager
+    # inputs.home-manager.nixosModules.home-manager
     ./kde/kde.nix
     ./boilerplate.nix
     ./sddm.nix
   ];
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs outputs; };
-    users = {
-      # Import your home-manager configuration
-      ryanl = import ../home-manager/home.nix;
-    };
-  };
+  # home-manager = {
+  #   extraSpecialArgs = { inherit inputs outputs; };
+  #   users = {
+  #     # Import your home-manager configuration
+  #     ryanl = import ../home-manager/home.nix;
+  #   };
+  # };
 
   networking.hostName = "bagelmachine"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
