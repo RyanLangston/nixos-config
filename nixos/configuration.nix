@@ -4,31 +4,19 @@
 
 {
   pkgs,
-  inputs,
-  outputs,
-  pkgs-stable,
   ...
 }:
 
 {
   imports = [
-    # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./nvidia.nix
     ./bigdwive.nix
-    # inputs.home-manager.nixosModules.home-manager
     ./kde/kde.nix
     ./boilerplate.nix
     ./sddm.nix
   ];
 
-  # home-manager = {
-  #   extraSpecialArgs = { inherit inputs outputs; };
-  #   users = {
-  #     # Import your home-manager configuration
-  #     ryanl = import ../home-manager/home.nix;
-  #   };
-  # };
 
   networking.hostName = "bagelmachine"; # Define your hostname.
   #networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -105,8 +93,6 @@
     kdePackages.kate
     kdePackages.filelight
     htop
-    pkgs-stable.goverlay
-    inputs.quickemu.packages.x86_64-linux.default
     nil
     fzf
   ];
@@ -118,11 +104,11 @@
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+  programs.mtr.enable = true;
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 
   # List services that you want to enable:
 
