@@ -1,7 +1,4 @@
-{
-  "nodes": {
-    "chaotic": {
-      "inputs": {
+{ "nodes": { "chaotic": { "inputs": {
         "flake-schemas": "flake-schemas",
         "home-manager": "home-manager",
         "jovian": "jovian",
