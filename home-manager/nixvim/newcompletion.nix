@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       keymap = {
-        preset = "super-tab";
+        preset = "enter";
       };
     };
   };
