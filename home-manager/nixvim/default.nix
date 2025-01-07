@@ -25,6 +25,7 @@
       lz-n.enable = true;
       nix.enable = true;
       lazygit.enable = true;
+      fzf-lua.enable = true;
     };
 
     performance = {
