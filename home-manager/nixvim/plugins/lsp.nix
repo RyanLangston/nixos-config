@@ -36,12 +36,12 @@
           ];
           ts-ls = {
             enable = true;
-          filetypes = [
-            "javascript"
-            "javascriptreact"
-            "typescript"
-            "typescriptreact"
-          ];
+            filetypes = [
+              "javascript"
+              "javascriptreact"
+              "typescript"
+              "typescriptreact"
+            ];
           };
         };
       };

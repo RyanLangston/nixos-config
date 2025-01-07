@@ -4,7 +4,7 @@
     settings = {
       keymap = {
         preset = "super-tab";
-      };    
+      };
     };
   };
 }

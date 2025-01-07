@@ -6,8 +6,9 @@
     ./lsp.nix
     ./neotree.nix
     ./barbar.nix
-    ./lualine.nix 
+    ./lualine.nix
     ./telescope.nix
     ./floaterm.nix
+    ./mini.nix
   ];
 }
