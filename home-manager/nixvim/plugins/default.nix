@@ -8,6 +8,7 @@
     ./barbar.nix
     ./lualine.nix 
     ./telescope.nix
+    ./floaterm.nix
   ];
 
 }
