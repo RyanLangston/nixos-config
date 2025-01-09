@@ -1,5 +1,3 @@
-# { input, ... }:
-
 {
   imports = [
     ./treesitter.nix
