@@ -17,7 +17,6 @@
   programs.nixvim = {
     enable = true;
 
-    colorschemes.catppuccin.enable = true;
 
     plugins = {
       which-key.enable = true;
