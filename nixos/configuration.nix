@@ -89,7 +89,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    librewolf
     kdePackages.kate
     kdePackages.filelight
     htop
@@ -101,6 +100,9 @@
     zed-editor
     kdePackages.plasma-systemmonitor
   ];
+
+  # Enable Firefox
+  programs.firefox.enable = true;
 
   # Enable Bluetooth support
   hardware.bluetooth.enable = true;
