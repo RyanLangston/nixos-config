@@ -34,7 +34,7 @@
           nil_ls.settings.formatting.command = [
             "nixfmt"
           ];
-          ts-ls = {
+          ts_ls = {
             enable = true;
             filetypes = [
               "javascript"
