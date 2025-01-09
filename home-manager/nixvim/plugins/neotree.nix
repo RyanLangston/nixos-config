@@ -23,6 +23,8 @@
 
       buffers.followCurrentFile.enabled = true;
 
+      filesystem.useLibuvFileWatcher = true;
+
       closeIfLastWindow = true;
       window = {
         width = 30;
