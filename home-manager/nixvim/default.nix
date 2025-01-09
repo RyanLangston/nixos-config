@@ -25,7 +25,6 @@
       web-devicons.enable = true;
       lz-n.enable = true;
       nix.enable = true;
-      lazygit.enable = true;
       fzf-lua.enable = true;
       nvim-autopairs.enable = true;
       auto-session.enable = true;
