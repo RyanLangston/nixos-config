@@ -98,6 +98,8 @@
     mangohud
     nix-tree
     youtube-music
+    zed-editor
+    kdePackages.plasma-systemmonitor
   ];
 
   # Enable Bluetooth support

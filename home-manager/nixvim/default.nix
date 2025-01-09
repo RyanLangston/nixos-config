@@ -7,7 +7,7 @@
     ./plugins
     ./options.nix
     ./keybindings.nix
-    ./newcompletion.nix
+    ./completion.nix
   ];
 
   home.shellAliases.v = "nvim";
