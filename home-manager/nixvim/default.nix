@@ -28,6 +28,7 @@
       nvim-autopairs.enable = true;
       auto-session.enable = true;
       direnv.enable = true;
+      precognition.enable = true;
     };
 
     performance = {
