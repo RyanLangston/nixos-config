@@ -21,6 +21,8 @@
 
       autoCleanAfterSessionRestore = true;
 
+      buffers.followCurrentFile.enabled = true;
+
       closeIfLastWindow = true;
       window = {
         width = 30;
