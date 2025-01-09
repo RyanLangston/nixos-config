@@ -88,6 +88,7 @@
       enable = true;
       userName = "Dragonlord1005";
       userEmail = "68302450+Dragonlord1005@users.noreply.github.com";
+      lfs.enable = true;
     };
     zsh = {
       enable = true;
