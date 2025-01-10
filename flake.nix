@@ -67,7 +67,7 @@
         modules = [
           # > Our main nixos configuration file <
           ./nixos/configuration.nix
-           inputs.chaotic.nixosModules.default
+          inputs.chaotic.nixosModules.default
         ];
       };
     };

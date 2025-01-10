@@ -1,9 +1,4 @@
-{
-  pkgs,
-  ...
-}:
-
-{
+{pkgs, ...}: {
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
   services.scx.enable = true; # by default uses scx_rustland scheduler
 

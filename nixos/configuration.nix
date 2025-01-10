@@ -21,7 +21,7 @@
     # ./users.nix
 
     # Import your generated (nixos-generate-config) hardware configuration
-     ./nvidia.nix
+    ./nvidia.nix
     ./bigdwive.nix
     ./kde/kde.nix
     ./boilerplate.nix
@@ -81,7 +81,7 @@
   networking.hostName = "bagelmachine";
 
   networking.hosts = {
-      "192.168.1.104" = [
+    "192.168.1.104" = [
       "tower.local"
       "tower"
     ];
