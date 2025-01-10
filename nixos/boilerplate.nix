@@ -1,9 +1,4 @@
-{
-  pkgs,
-  ...
-}:
-
-{
+{pkgs, ...}: {
   boot.kernelPackages = pkgs.linuxPackages_cachyos;
   services.scx.enable = true; # by default uses scx_rustland scheduler
 
@@ -11,7 +6,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  boot.loader.systemd-boot.configurationLimit = 6;
+  boot.loader.systemd-boot.configurationLimit = 10;
 
   # Set your time zone.
   time.timeZone = "America/Denver";
@@ -35,10 +30,4 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
-  # Enable the Flakes feature and the accompanying new nix command-line tool
-  nix.settings.experimental-features = [
-    "nix-command"
-    "flakes"
-  ];
 }
