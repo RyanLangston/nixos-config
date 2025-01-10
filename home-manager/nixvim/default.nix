@@ -10,7 +10,7 @@
 
   home.shellAliases.v = "nvim";
 
-  home.shellAliases.home-update = "home-manager switch --flake ~/nixos-config/#ryanl@bagemachine";
+  home.shellAliases.home-update = "home-manager switch --flake ~/nixos-config/#ryanl@bagelmachine";
 
   programs.nixvim = {
     enable = true;
