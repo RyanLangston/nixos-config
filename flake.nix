@@ -21,6 +21,8 @@
 
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-index-database.url = "github:nix-community/nix-index-database";
+    nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs = {
@@ -81,6 +83,7 @@
         modules = [
           # > Our main home-manager configuration file <
           ./home-manager/home.nix
+          inputs.nix-index-database.hmModules.nix-index
         ];
       };
     };
