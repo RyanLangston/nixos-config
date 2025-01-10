@@ -4,6 +4,7 @@
 
     settings = {
       options.globalstatus = true;
+      options.theme = "catppuccin";
 
       # +-------------------------------------------------+
       # | A | B | C                             X | Y | Z |

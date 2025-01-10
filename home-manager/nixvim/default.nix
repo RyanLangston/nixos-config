@@ -23,6 +23,7 @@
       mini.enable = true;
       web-devicons.enable = true;
       lz-n.enable = true;
+      gitsigns.enable = true;
       nix.enable = true;
       fzf-lua.enable = true;
       nvim-autopairs.enable = true;
