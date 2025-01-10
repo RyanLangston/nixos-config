@@ -83,6 +83,7 @@
       };
     };
     nix-index.enable = true;
+    nix-index-database.comma.enable = true;
   };
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
