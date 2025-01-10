@@ -10,7 +10,7 @@
   services.desktopManager.plasma6.enable = true;
 
   programs.kdeconnect.enable = true;
-  programs.partition-manager.enable
+  programs.partition-manager.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb = {
