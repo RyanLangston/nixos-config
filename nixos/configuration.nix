@@ -23,7 +23,7 @@
     # Import your generated (nixos-generate-config) hardware configuration
     ./nvidia.nix
     ./bigdwive.nix
-    ./kde/kde.nix
+    ./de
     ./boilerplate.nix
     ./packages.nix
     ./misc.nix
