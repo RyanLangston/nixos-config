@@ -25,7 +25,6 @@
     ./bigdwive.nix
     ./kde/kde.nix
     ./boilerplate.nix
-    ./sddm.nix
     ./packages.nix
     ./misc.nix
     ./hardware-configuration.nix
