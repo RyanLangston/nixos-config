@@ -114,6 +114,7 @@
 
   services.ollama.enable = true;
   programs.firefox.enable = true;
+  programs.gamemode.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.11";
