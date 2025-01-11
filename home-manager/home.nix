@@ -88,6 +88,7 @@
     kitty = {
       enable = true;
       shellIntegration.enableZshIntegration = true;
+      themeFile = "Catppuccin-Macchiato";
     };
   };
   # Nicely reload system units when changing configs
