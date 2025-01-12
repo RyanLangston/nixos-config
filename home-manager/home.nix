@@ -60,6 +60,7 @@
     yazi
     rsync
     sshfs
+    xxh
   ];
 
   # Enable home-manager and git
