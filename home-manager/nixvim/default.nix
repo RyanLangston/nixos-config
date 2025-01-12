@@ -13,6 +13,7 @@
   programs.nixvim = {
     enable = true;
 
+    defaultEditor = true;
     plugins = {
       which-key.enable = true;
       mini.enable = true;
