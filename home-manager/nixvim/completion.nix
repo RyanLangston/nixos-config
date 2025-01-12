@@ -5,6 +5,7 @@
       keymap = {
         preset = "super-tab";
       };
+      signature.enabled = true;
     };
   };
 }
