@@ -58,6 +58,8 @@
     fastfetch
     ripgrep
     yazi
+    rsync
+    sshfs
   ];
 
   # Enable home-manager and git
