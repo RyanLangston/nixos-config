@@ -13,5 +13,6 @@
     kdePackages.plasma-systemmonitor
     shadps4
     qbittorrent
+    protonup-qt
   ];
 }
