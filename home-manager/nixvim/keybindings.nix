@@ -55,6 +55,9 @@
           "<M-j>" = ":move+<CR>";
 
           "<leader>g" = ":LazyGit<CR>";
+
+          # Close all but current buffer
+          "<leader>w" = ":BufferCloseAllButCurrent<CR>";
         };
       visual =
         lib.mapAttrsToList
