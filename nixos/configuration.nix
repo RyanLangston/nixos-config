@@ -28,6 +28,7 @@
     ./packages.nix
     ./misc.nix
     ./hardware-configuration.nix
+    ./tower.nix
   ];
 
   nixpkgs = {
