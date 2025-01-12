@@ -61,6 +61,7 @@
     rsync
     sshfs
     xxh
+    sshpass
   ];
 
   # Enable home-manager and git
