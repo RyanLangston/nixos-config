@@ -11,5 +11,7 @@
     nix-tree
     youtube-music
     kdePackages.plasma-systemmonitor
+    shadps4
+    qbittorrent
   ];
 }
