@@ -4,7 +4,7 @@
   programs.git.aliases = {
     a = "add";
     aa = "add --all";
-    cm = "commit -m";
+    cm = "commit -S -m";
     p = "push";
   };
 
