@@ -87,10 +87,12 @@
       oh-my-zsh = {
         enable = true;
         theme = "robbyrussell";
+        plugins = [
+          "gpg-agent"
+        ];
       };
-      initExtra = "export GPG_TTY=\$(tty)\nexport SSH_AUTH_SOCK=\$(gpgconf --list-dirs agent-ssh-socket)\ngpgconf --launch gpg-agent\ngpg-connect-agent updatestartuptty /bye > /dev/null
-";
     };
+
     nix-index.enable = true;
     nix-index-database.comma.enable = true;
     kitty = {
