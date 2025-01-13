@@ -54,15 +54,12 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs; [
     tldr
-    vscode
     meslo-lgs-nf
     fastfetch
     ripgrep
     yazi
     rsync
     sshfs
-    xxh
-    sshpass
     pinentry-qt
   ];
 
