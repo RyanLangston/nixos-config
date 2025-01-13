@@ -15,5 +15,6 @@
     qbittorrent
     protonup-qt
     yubikey-personalization
+    discord
   ];
 }
