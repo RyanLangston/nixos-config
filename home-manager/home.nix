@@ -17,6 +17,7 @@
     # ./nvim.nix
     ./nixvim
     ./aliases.nix
+    ./gpg.nix
   ];
 
   nixpkgs = {
@@ -79,6 +80,9 @@
       userName = "Dragonlord1005";
       userEmail = "68302450+Dragonlord1005@users.noreply.github.com";
       lfs.enable = true;
+      signing = {
+        key = "AE81A0207AFF5C1B";
+      };
     };
     zsh = {
       enable = true;
