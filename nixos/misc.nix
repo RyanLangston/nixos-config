@@ -16,6 +16,8 @@
     };
   };
 
+  services.yubikey-agent.enable = true;
+
   # Perform garbage collection weekly to maintain low disk usage
   nix.gc = {
     automatic = true;

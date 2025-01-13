@@ -14,5 +14,6 @@
     shadps4
     qbittorrent
     protonup-qt
+    yubikey-personalization
   ];
 }

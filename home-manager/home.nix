@@ -62,6 +62,7 @@
     sshfs
     xxh
     sshpass
+    pinentry-qt
   ];
 
   # Enable home-manager and git
@@ -86,6 +87,8 @@
         enable = true;
         theme = "robbyrussell";
       };
+      initExtra = "export GPG_TTY=\$(tty)\nexport SSH_AUTH_SOCK=\$(gpgconf --list-dirs agent-ssh-socket)\ngpgconf --launch gpg-agent\ngpg-connect-agent updatestartuptty /bye > /dev/null
+";
     };
     nix-index.enable = true;
     nix-index-database.comma.enable = true;
@@ -99,6 +102,12 @@
       enableZshIntegration = true;
     };
   };
+  services.gpg-agent = {
+    enable = true;
+    enableSshSupport = true;
+    pinentryPackage = pkgs.pinentry-qt;
+  };
+
   # Nicely reload system units when changing configs
   systemd.user.startServices = "sd-switch";
 
