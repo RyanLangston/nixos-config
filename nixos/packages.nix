@@ -16,5 +16,7 @@
     protonup-qt
     yubikey-personalization
     discord
+    nexusmods-app-unfree
+    nexusmods-app
   ];
 }

@@ -43,6 +43,8 @@
               "typescriptreact"
             ];
           };
+          ruff.enable = true;
+          pyright.enable = true;
         };
       };
       hmts.enable = true;
