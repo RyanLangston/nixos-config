@@ -95,11 +95,6 @@
 
     nix-index.enable = true;
     nix-index-database.comma.enable = true;
-    kitty = {
-      enable = true;
-      shellIntegration.enableZshIntegration = true;
-      themeFile = "Catppuccin-Macchiato";
-    };
     zoxide = {
       enable = true;
       enableZshIntegration = true;
