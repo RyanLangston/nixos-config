@@ -18,5 +18,6 @@
     discord
     ghostty
     neovide
+    kdePackages.kleopatra
   ];
 }
