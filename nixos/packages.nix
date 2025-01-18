@@ -16,5 +16,7 @@
     protonup-qt
     yubikey-personalization
     discord
+    ghostty
+    neovide
   ];
 }
