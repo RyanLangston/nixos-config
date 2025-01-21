@@ -96,7 +96,7 @@
       openssh.authorizedKeys.keys = [
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
       ];
-      extraGroups = ["wheel" "networkmanager" "audio" "libvirtd"];
+      extraGroups = ["wheel" "networkmanager" "audio" "libvirtd" "docker"];
       shell = pkgs.zsh;
     };
   };
@@ -120,6 +120,9 @@
   programs.gamescope.enable = true;
   programs.virt-manager.enable = true;
   virtualisation.libvirtd.enable = true;
+
+  virtualisation.docker.enable = true;
+  hardware.nvidia-container-toolkit.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.11";
