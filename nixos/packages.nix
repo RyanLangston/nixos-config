@@ -19,5 +19,6 @@
     ghostty
     neovide
     kdePackages.kleopatra
+    vscode
   ];
 }
