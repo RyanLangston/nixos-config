@@ -122,6 +122,7 @@
   virtualisation.libvirtd.enable = true;
 
   virtualisation.docker.enable = true;
+  virtualisation.docker.daemon.settings.features.cdi = true;
   hardware.nvidia-container-toolkit.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion

@@ -20,5 +20,7 @@
     neovide
     kdePackages.kleopatra
     vscode
+    cryptomator
+    rclone
   ];
 }
