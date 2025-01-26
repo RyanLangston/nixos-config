@@ -18,8 +18,8 @@
       },
       "original": {
         "owner": "chaotic-cx",
-        "ref": "nyxpkgs-unstable",
         "repo": "nyx",
+        "rev": "e300abf0ef16528298be33f66a2f70b20b15d2fa",
         "type": "github"
       }
     },
@@ -407,11 +407,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1737062831,
-        "narHash": "sha256-Tbk1MZbtV2s5aG+iM99U8FqwxU/YNArMcWAv6clcsBc=",
+        "lastModified": 1737885589,
+        "narHash": "sha256-Zf0hSrtzaM1DEz8//+Xs51k/wdSajticVrATqDrfQjg=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "5df43628fdf08d642be8ba5b3625a6c70731c19c",
+        "rev": "852ff1d9e153d8875a83602e03fdef8a63f0ecf8",
         "type": "github"
       },
       "original": {
