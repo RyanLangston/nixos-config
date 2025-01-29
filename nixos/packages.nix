@@ -19,7 +19,7 @@
     ghostty
     neovide
     kdePackages.kleopatra
-    vscode
+    vscode-fhs
     cryptomator
     rclone
   ];
