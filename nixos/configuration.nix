@@ -114,7 +114,14 @@
     };
   };
 
-  services.ollama.enable = true;
+  services.ollama = {
+    enable = true;
+    loadModels = [
+      "deepseek-r1:8b"
+      "qwen2.5-coder:1.5b-base"
+      "nomic-embed-text"
+    ];
+  };
   programs.firefox.enable = true;
   programs.gamemode.enable = true;
   programs.gamescope.enable = true;
