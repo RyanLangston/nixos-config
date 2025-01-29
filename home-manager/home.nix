@@ -79,6 +79,7 @@
       lfs.enable = true;
       signing = {
         key = "AE81A0207AFF5C1B";
+        signByDefault = true;
       };
     };
     zsh = {
