@@ -22,6 +22,5 @@
     vscode-fhs
     cryptomator
     rclone
-    uv
   ];
 }
