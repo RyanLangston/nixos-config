@@ -22,5 +22,8 @@
     vscode-fhs
     cryptomator
     rclone
+    picocrypt
+    haruna
+    exfat
   ];
 }
