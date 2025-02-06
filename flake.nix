@@ -17,11 +17,11 @@
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
 
     # Nyx packages
-    # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     # Temporarily pin to a specific commit until modDir is fixed
     # TODO: Remove this once the issue is resolved
-    chaotic.url = "github:chaotic-cx/nyx/?rev=e300abf0ef16528298be33f66a2f70b20b15d2fa";
+    # chaotic.url = "github:chaotic-cx/nyx/?rev=e300abf0ef16528298be33f66a2f70b20b15d2fa";
 
     # NixVim
     nixvim = {
