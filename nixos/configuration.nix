@@ -96,7 +96,7 @@
       openssh.authorizedKeys.keys = [
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
       ];
-      extraGroups = ["wheel" "networkmanager" "audio" "libvirtd" "docker"];
+      extraGroups = ["wheel" "networkmanager" "audio" "libvirtd" "docker" "video"];
       shell = pkgs.zsh;
     };
   };
