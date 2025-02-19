@@ -26,6 +26,8 @@
     picocrypt
     haruna
     exfat
+    opentrack
+    aitrack
     v4l-utils
     gst_all_1.gstreamer
     gst_all_1.gst-plugins-base
