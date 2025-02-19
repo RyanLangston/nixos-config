@@ -19,6 +19,7 @@
     ghostty
     neovide
     kdePackages.kleopatra
+    kdePackages.akregator
     vscode-fhs
     cryptomator
     rclone
