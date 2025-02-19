@@ -25,6 +25,12 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    # Add support for Video4Linux2 (V4L2)
+    extraConfig.pipewire = {
+      "context.modules" = [
+        { name = "libpipewire-module-v4l2"; args = ""; }
+      ];
+    };
     # systemWide = true;
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
