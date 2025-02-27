@@ -9,6 +9,8 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-24.11";
     # Also see the 'unstable-packages' overlay at 'overlays/default.nix'.
 
+    small.url = "github:nixos/nixpkgs/nixos-unstable-small";
+
     # Home manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -18,10 +20,6 @@
 
     # Nyx packages
     chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
-
-    # Temporarily pin to a specific commit until modDir is fixed
-    # TODO: Remove this once the issue is resolved
-    # chaotic.url = "github:chaotic-cx/nyx/?rev=e300abf0ef16528298be33f66a2f70b20b15d2fa";
 
     # NixVim
     nixvim = {
