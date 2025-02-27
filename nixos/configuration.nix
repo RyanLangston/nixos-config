@@ -132,6 +132,15 @@
   virtualisation.docker.daemon.settings.features.cdi = true;
   hardware.nvidia-container-toolkit.enable = true;
 
+  # Networking related stuff
+  networking.networkmanager.wifi.powersave = false;
+  # networking.nameservers = [
+  #   "1.1.1.1"
+  #   "1.0.0.1"
+  #   "8.8.8.8"
+  #   "8.4.4.8"
+  # ];
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.11";
 }
