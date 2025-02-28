@@ -61,7 +61,6 @@
     rsync
     sshfs
     pinentry-qt
-    mpv
   ];
 
   # Enable home-manager and git
