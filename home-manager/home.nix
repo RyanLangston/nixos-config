@@ -75,7 +75,7 @@
     };
     git = {
       enable = true;
-      userName = "Dragonlord1005";
+      userName = "RyanLangston";
       userEmail = "dragonlord100587@gmail.com";
       lfs.enable = true;
       signing = {
