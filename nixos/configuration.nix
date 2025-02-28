@@ -141,6 +141,18 @@
   #   "8.4.4.8"
   # ];
 
+  systemd.user.services.jellyfin-mpv-shim = {
+    enable = true;
+    description = "Jellyfin MPV Shim";
+    after = [ "network.target" ];
+    wantedBy = [ "default.target" ];
+    serviceConfig = {
+      ExecStart = "${pkgs.jellyfin-mpv-shim}/bin/jellyfin-mpv-shim";
+      Restart = "always";
+      Environment = "DISPLAY=:0";
+    };
+  };
+
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "24.11";
 }
