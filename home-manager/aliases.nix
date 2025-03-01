@@ -5,7 +5,8 @@
     a = "add";
     aa = "add --all";
     cm = "commit -S -m";
-    p = "push";
+    ps = "push";
+    pl = "pull";
   };
 
   home.shellAliases.home-update = "home-manager switch --flake ~/nixos-config/#ryanl@bagelmachine";
