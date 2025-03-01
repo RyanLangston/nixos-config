@@ -34,6 +34,7 @@
     mpv
     # Use until full unstable gets updated version
     (inputs.small.legacyPackages.x86_64-linux.freetube)
+    exercism
     gst_all_1.gstreamer
     gst_all_1.gst-plugins-base
     gst_all_1.gst-plugins-good
