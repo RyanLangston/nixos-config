@@ -61,6 +61,7 @@
     rsync
     sshfs
     pinentry-qt
+    yt-dlp
   ];
 
   # Enable home-manager and git
