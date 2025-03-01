@@ -94,8 +94,11 @@
         ];
       };
     };
-
-    nix-index.enable = true;
+    pay-respects= {
+      enable = true;
+      enableZshIntegration = true;
+    };
+   nix-index.enable = true;
     nix-index-database.comma.enable = true;
     zoxide = {
       enable = true;
