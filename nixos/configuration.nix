@@ -29,6 +29,7 @@
     ./misc.nix
     ./hardware-configuration.nix
     ./tower.nix
+    ./flatpakss.nix
   ];
 
   nixpkgs = {
