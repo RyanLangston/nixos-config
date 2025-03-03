@@ -25,6 +25,9 @@
           # fix Y behaviour
           Y = "y$";
 
+          # Fix stupid Ctrl W
+          "<C-W>" = "";
+
           # back and fourth between the two most recent files
           "<C-c>" = ":b#<CR>";
 
