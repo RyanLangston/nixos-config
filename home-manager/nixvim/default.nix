@@ -23,7 +23,7 @@
       nix.enable = true;
       fzf-lua.enable = true;
       nvim-autopairs.enable = true;
-      auto-session.enable = true;
+      # auto-session.enable = true;
       direnv.enable = true;
       precognition.enable = true;
     };
