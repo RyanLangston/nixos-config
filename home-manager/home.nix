@@ -62,6 +62,9 @@
     sshfs
     pinentry-qt
     yt-dlp
+    rustc
+    rustfmt
+    cargo
   ];
 
   # Enable home-manager and git
