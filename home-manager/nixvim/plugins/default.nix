@@ -8,7 +8,7 @@
     ./telescope.nix
     ./floaterm.nix
     ./mini.nix
-    ./tpputchin.nix
+    ./catpputchin.nix
     ./autosession.nix 
   ];
 }
