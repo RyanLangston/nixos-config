@@ -34,10 +34,9 @@
 
   sops.defaultSopsFile = ../secrets/monero.enc.yaml;
   sops.age.keyFile = "/home/ryanl/.config/sops/age/keys.txt";
-  sops.secrets.monero_mining_address = {};
-
+  
   services.xmrig = {
-    enable = true;
+    enable = false;
     settings = {
       
       autosave = true;
