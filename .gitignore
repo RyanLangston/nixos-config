@@ -3,3 +3,5 @@ bandit.md
 
 !bandit.md.gpg
 bandit17key.private
+
+secrets/monero.yaml

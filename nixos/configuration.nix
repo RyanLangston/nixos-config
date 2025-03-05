@@ -32,6 +32,39 @@
     ./flatpakss.nix
   ];
 
+  sops.defaultSopsFile = ../secrets/monero.enc.yaml;
+  sops.age.keyFile = "/home/ryanl/.config/sops/age/keys.txt";
+  sops.secrets.monero_mining_address = {};
+
+  services.xmrig = {
+    enable = true;
+    settings = {
+      
+      autosave = true;
+      cpu = true;
+      opencl = false;
+      cuda = false;
+      pools = [
+        {
+          coin = "monero";
+          algo = null;
+          url = "gulf.moneroocean.stream:10001";
+          user = "49DGw1PJdoQGKdvuWK9o4vGZaf6MPLmFdRNxtyLKc3uRdXFx87XEx1mBe3iT6Zw15aYtPPGdeVUvf12xeX2iHkMyPZxNs9p";
+          pass = "x";
+          tls = false;
+          keepalive = true;
+          nicehash = false;
+        }
+        {
+          url = "pool.supportxmr.com:443";
+          user = "49DGw1PJdoQGKdvuWK9o4vGZaf6MPLmFdRNxtyLKc3uRdXFx87XEx1mBe3iT6Zw15aYtPPGdeVUvf12xeX2iHkMyPZxNs9p";
+          keepalive = true;
+          tls = true;
+        }
+      ];
+    };
+  };
+
   nixpkgs = {
     # You can add overlays here
     overlays = [
@@ -128,11 +161,6 @@
   programs.gamescope.enable = true;
   programs.virt-manager.enable = true;
   virtualisation.libvirtd.enable = true;
-  services.monero = {
-    enable = true;
-    # mining.enable = true;
-  };
-
   virtualisation.docker.enable = true;
   virtualisation.docker.daemon.settings.features.cdi = true;
   hardware.nvidia-container-toolkit.enable = true;

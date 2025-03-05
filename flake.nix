@@ -31,6 +31,7 @@
     nix-index-database.inputs.nixpkgs.follows = "nixpkgs";
     # Nix Flatpaks
     nix-flatpak.url = "github:gmodena/nix-flatpak";
+    sops-nix.url = "github:Mic92/sops-nix";
   };
 
   outputs = {
@@ -78,6 +79,7 @@
           ./nixos/configuration.nix
           inputs.chaotic.nixosModules.default
           inputs.nix-flatpak.nixosModules.nix-flatpak
+          inputs.sops-nix.nixosModules.sops
         ];
       };
     };
