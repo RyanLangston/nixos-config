@@ -128,6 +128,10 @@
   programs.gamescope.enable = true;
   programs.virt-manager.enable = true;
   virtualisation.libvirtd.enable = true;
+  services.monero = {
+    enable = true;
+    # mining.enable = true;
+  };
 
   virtualisation.docker.enable = true;
   virtualisation.docker.daemon.settings.features.cdi = true;
