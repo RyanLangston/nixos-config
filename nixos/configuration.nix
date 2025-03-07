@@ -43,6 +43,9 @@
       cpu = true;
       opencl = false;
       cuda = false;
+      randomx = {
+        "1gb-pages" = true;
+      };
       pools = [
         {
           coin = "monero";
@@ -63,6 +66,7 @@
       ];
     };
   };
+  services.monero.enable = true;
 
   nixpkgs = {
     # You can add overlays here
