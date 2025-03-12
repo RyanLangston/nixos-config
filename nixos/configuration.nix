@@ -178,6 +178,12 @@
   #   "8.4.4.8"
   # ];
 
+  services.syncthing = {
+    enable = true;
+    overrideFolders = false;
+    overrideDevices = false;
+  };
+
   systemd.user.services.jellyfin-mpv-shim = {
     enable = true;
     description = "Jellyfin MPV Shim";
