@@ -66,7 +66,7 @@
       ];
     };
   };
-  services.monero.enable = true;
+  services.monero.enable = false;
 
   nixpkgs = {
     # You can add overlays here
